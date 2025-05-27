@@ -11,7 +11,7 @@ connectDB();
 
 
 
-const port=5000;
+const port=5000 || process.env.port;
 app.use(bodyParser.json());
 app.use(cors());
 app.use('/api/user',formRoutes);
